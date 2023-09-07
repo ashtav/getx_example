@@ -8,7 +8,7 @@ import 'app/routes/app_pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  LazyUi.init(alwaysPortrait: true);
+  LazyUi.config(alwaysPortrait: true);
 
   UseFetchly(
       baseUrl: 'https://dummyjson.com/',
@@ -18,22 +18,12 @@ void main() async {
 
   runApp(
     GetMaterialApp(
-      title: "Getx Example",
-      initialRoute: AppPages.INITIAL,
-      getPages: AppPages.routes,
-      theme: appTheme,
-      debugShowCheckedModeBanner: false,
-      defaultTransition: Transition.cupertino,
-      builder: (BuildContext context, Widget? widget) {
-        double fontDeviceSize = MediaQuery.of(context).textScaleFactor;
-
-        // prevent user from scaling font size
-        return MediaQuery(
-            data: MediaQuery.of(context).copyWith(
-              textScaleFactor: fontDeviceSize > 1.1 ? 1.1 : 1.0,
-            ),
-            child: LzToastOverlay(child: widget));
-      },
-    ),
+        title: "Getx Example",
+        initialRoute: AppPages.INITIAL,
+        getPages: AppPages.routes,
+        theme: appTheme,
+        debugShowCheckedModeBanner: false,
+        defaultTransition: Transition.cupertino,
+        builder: LazyUi.builder),
   );
 }

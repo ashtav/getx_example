@@ -62,7 +62,7 @@ class TodoView extends GetView<TodoController> {
                         .onTap(() {
                       LzConfirm(
                           title: 'Delete Todo',
-                          message: 'Are you sure want to delete this todo?',
+                          message: 'Are you sure you want to delete this todo?',
                           onConfirm: () {
                             controller.remove(item.id!);
                           }).show(context);

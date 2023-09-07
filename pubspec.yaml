@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^5.0.0-release-candidate-4
-  lazyui: ^1.0.0
+  lazyui: ^1.0.2
 
 dev_dependencies:
   flutter_lints: ^2.0.0
