@@ -1,0 +1,45 @@
+
+    # GET CLI COMMANDS
+
+        // To generate the chosen structure on an existing project:
+
+        -> get init
+
+        // To create a page:
+        // (Pages have controller, view, and binding)
+        // Note: you can use any name, ex: `get create page:login`
+        // Nota: use this option if the chosen structure was Getx_pattern
+
+        -> get create page:user
+
+        // To create a new controller in a specific folder:
+        // Note: you don't need to reference the folder,
+        // Getx will search automatically for the home folder
+        // and add your controller there.
+
+        -> get create controller:user on home
+
+        // To create a new view in a specific folder:
+        // Note: you don't need to reference the folder,
+        // Getx will automatically search for the home folder
+        // and insert your view there.
+
+        -> get create view:item on home
+
+        // To generate a localization file:
+        // Note: 'assets/locales' directory with your translation files in json format
+        
+        -> get generate locales assets/locales
+
+        // to generate the model without the provider
+        
+        -> get generate model on data/models with assets/models/todo.json --skipProvider
+
+    # IMPORT SORTER
+
+        -> flutter pub run import_sorter:main
+
+    # RELEASE
+
+        -> flutter build appbundle
+        -> flutter build apk --split-per-abi
