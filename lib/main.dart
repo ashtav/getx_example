@@ -1,6 +1,7 @@
 import 'package:fetchly/fetchly.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:getx_example/app/core/constants/theme.dart';
 import 'package:lazyui/lazyui.dart';
 
@@ -15,6 +16,8 @@ void main() async {
       onRequest: (status, data) {
         logg('listen to request: $status');
       }).init();
+
+  await GetStorage.init();
 
   runApp(
     GetMaterialApp(
