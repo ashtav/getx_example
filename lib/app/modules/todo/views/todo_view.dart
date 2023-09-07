@@ -45,8 +45,7 @@ class TodoView extends GetView<TodoController> {
                           width: 15,
                           height: 15,
                           decoration: BoxDecoration(
-                            color:
-                                isCompleted ? Colors.green : Colors.transparent,
+                            color: isCompleted ? Colors.green : Colors.transparent,
                             border: isCompleted ? null : Border.all(),
                             borderRadius: Br.radius(15),
                           ),
@@ -55,14 +54,9 @@ class TodoView extends GetView<TodoController> {
                         Text('${item.todo}').flexible(),
                       ],
                     ).flexible(),
-                    Iconr(Ti.x,
-                            padding: Ei.all(13),
-                            color: Colors.black45,
-                            margin: Ei.only(l: 20))
-                        .onTap(() {
+                    Iconr(Ti.x, padding: Ei.all(13), color: Colors.black45, margin: Ei.only(l: 20)).onTap(() {
                       LzConfirm(
                           title: 'Delete Todo',
-                          message: 'Are you sure you want to delete this todo?',
                           onConfirm: () {
                             controller.remove(item.id!);
                           }).show(context);
