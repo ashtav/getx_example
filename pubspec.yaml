@@ -10,7 +10,7 @@ dependencies:
   fetchly: ^0.0.1
   flutter:
     sdk: flutter
-  get: 4.6.5
+  get: ^5.0.0-release-candidate-4
   lazyui: ^1.0.0
 
 dev_dependencies:

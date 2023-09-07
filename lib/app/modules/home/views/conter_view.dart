@@ -9,7 +9,7 @@ class CounterView extends GetView<CounterController> {
 
   @override
   Widget build(BuildContext context) {
-    Get.lazyPut(() => CounterController());
+    Bind.lazyPut<CounterController>(() => CounterController());
 
     return Scaffold(
       appBar: AppBar(

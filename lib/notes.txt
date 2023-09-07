@@ -10,7 +10,7 @@
         // Note: you can use any name, ex: `get create page:login`
         // Nota: use this option if the chosen structure was Getx_pattern
 
-        -> get create page:user
+        -> get create page:test
 
         // To create a new controller in a specific folder:
         // Note: you don't need to reference the folder,

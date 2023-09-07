@@ -23,6 +23,7 @@ void main() async {
       getPages: AppPages.routes,
       theme: appTheme,
       debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.cupertino,
       builder: (BuildContext context, Widget? widget) {
         double fontDeviceSize = MediaQuery.of(context).textScaleFactor;
 
