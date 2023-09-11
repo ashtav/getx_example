@@ -26,7 +26,10 @@ class HomeView extends GetView<HomeController> {
               onTap: () {
                 switch (i) {
                   case 0:
-                    context.bottomSheet(const CounterView());
+                    Get.bottomSheet(const CounterView(),
+                            isScrollControlled: true,
+                            enableDrag: false,
+                            ignoreSafeArea: false);
                     break;
 
                   case 1:

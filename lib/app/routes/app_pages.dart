@@ -1,7 +1,11 @@
 import 'package:get/get.dart';
 
+import '../modules/home/bindings/counter_binding.dart';
 import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/conter_view.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/test/bindings/test_binding.dart';
+import '../modules/test/views/test_view.dart';
 import '../modules/todo/bindings/todo_binding.dart';
 import '../modules/todo/views/todo_view.dart';
 import '../modules/user/bindings/user_binding.dart';
@@ -31,6 +35,16 @@ class AppPages {
       name: _Paths.USER,
       page: () => const UserView(),
       binding: UserBinding(),
+    ),
+    GetPage(
+      name: _Paths.COUNTER,
+      page: () => const CounterView(),
+      binding: CounterBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEST,
+      page: () => const TestView(),
+      binding: TestBinding(),
     ),
   ];
 }

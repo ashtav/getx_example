@@ -2,11 +2,11 @@ import 'package:get/get.dart';
 
 import '../controllers/user_controller.dart';
 
-class UserBinding extends Binding {
+class UserBinding extends Bindings {
   @override
-  List<Bind> dependencies() {
-    return [
-      Bind.lazyPut<UserController>(() => UserController()),
-    ];
+  void dependencies() {
+    Get.lazyPut<UserController>(
+      () => UserController(),
+    );
   }
 }

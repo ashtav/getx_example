@@ -1,3 +1,3 @@
-import 'package:get_storage/get_storage.dart';
+// import 'package:get_storage/get_storage.dart';
 
-final storage = GetStorage();
+// final storage = GetStorage();
